@@ -1,0 +1,131 @@
+/* ----------------------------------- */
+/* 1. RESET DASAR & TYPOGRAPHY */
+/* ----------------------------------- */
+
+/* Box sizing untuk memudahkan layout */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Font dasar untuk seluruh body */
+body {
+    font-family: Arial, sans-serif; /* Font umum dan mudah dibaca */
+    line-height: 1.6;
+    color: #333; /* Warna teks gelap */
+    background-color: #f4f4f9; /* Warna latar belakang sangat terang */
+    padding: 20px;
+}
+
+/* Penataan Konten agar berada di tengah dan tidak terlalu lebar */
+body > * {
+    max-width: 800px; /* Batasan lebar maksimum */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: #fff; /* Latar belakang bagian konten putih */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sedikit bayangan */
+    margin-bottom: 20px; /* Jarak antar bagian */
+}
+
+/* Judul utama */
+h1 {
+    font-size: 2.5em;
+    color: #007bff; /* Warna biru untuk branding */
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+/* Sub-judul */
+h2 {
+    font-size: 1.8em;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+
+/* ----------------------------------- */
+/* 2. STYLING SPESIFIK BAGIAN */
+/* ----------------------------------- */
+
+/* Header (Hero Section) */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e9f0ff; /* Latar belakang header lebih lembut */
+    box-shadow: none; /* Hilangkan bayangan di header agar terlihat menyatu */
+}
+
+.hero .tagline {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Daftar (Skills Section) */
+#skills ul {
+    list-style: none; /* Hilangkan bullet point default */
+    padding: 0;
+    display: flex; /* Gunakan Flexbox untuk tata letak baris */
+    flex-wrap: wrap; /* Izinkan pindah baris pada layar kecil */
+    gap: 10px; /* Jarak antar item */
+}
+
+#skills ul li {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* Kontak (Contact Section) */
+.contact-links a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-links a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 40px;
+    padding: 10px 0;
+    box-shadow: none;
+    background-color: transparent; /* Hilangkan latar belakang dan bayangan */
+}
+
+/* ----------------------------------- */
+/* 3. MEDIA QUERY (Responsif Dasar) */
+/* ----------------------------------- */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    body > * {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #skills ul {
+        flex-direction: column; /* Item skill menjadi vertikal di HP */
+    }
+}
